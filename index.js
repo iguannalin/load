@@ -5,7 +5,7 @@ window.addEventListener("load", () => {
   const states = ["-","\\","|","/"];
   let angle = 0;
   let step = (2*Math.PI) / 12;
-  function drawCard() {
+  function loadState() {
     if (state > 11) return clearInterval(int);
     let radius = 300;
     let x = 500 + radius * Math.cos(angle);
@@ -19,5 +19,5 @@ window.addEventListener("load", () => {
     state++;
   }
 
-  button.onclick = () => {int = setInterval(drawCard, 750);};
+  button.onclick = () => {int = setInterval(loadState, 750);};
 });
