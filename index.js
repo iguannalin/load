@@ -21,5 +21,5 @@ window.addEventListener("load", () => {
     state++;
   }
 
-  button.onclick = () => {int = setInterval(drawCard, 250);};
+  button.onclick = () => {int = setInterval(drawCard, 200);};
 });
