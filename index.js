@@ -13,7 +13,7 @@ window.addEventListener("load", () => {
     angle += step;
     console.log({state,x,y});
 
-    const text = `<!DOCTYPE html><html><head><title>${states[state]}</title><meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"><style>body{margin:0 auto;text-align:center;color: #f9faffde;text-shadow: #858ebc -2px 2px 8px; width:100vw;height:100vh;background-color:rgb(35, 35, 35);}</style><div id="container" dataset-states=${states} dataset-state=${state}><h1 id='state'>${states[state%states.length]}</h1><script src='state.js'></script></div></body></html>`;
+    const text = `<!DOCTYPE html><html><head><title>${states[state]}</title><meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"><style>body{margin:0 auto;text-align:center;color: #f9faffde;text-shadow: #858ebc -2px 2px 8px; width:100vw;height:100vh;background-color:rgb(35, 35, 35);}</style><div id="container" data-states=${states} data-state=${state}><h1 id='state'>${states[state%states.length]}</h1><script src='https://iguannalin.github.io/load/state.js'></script></div></body></html>`;
     const blob = new Blob([text], {type: "text/html"});
     const blobUrl = URL.createObjectURL(blob);
     window.open(blobUrl, '_blank', `popup,location,status,scrollbars,resizable,width=100,height=100,top=${y},left=${x}`);
